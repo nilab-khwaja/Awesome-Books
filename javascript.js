@@ -1,12 +1,9 @@
 const bookList = document.getElementById('book-list');
-const testText = document.getElementById('test');
 let books = [];
 if (localStorage.getItem('addBook') !== null) {
     const json = localStorage.getItem('addBook');
     books = JSON.parse(json );
   } ;
-
-  console.log("the books"+ books);
 
 const addBtn = document.getElementById('add-btn');
 addBtn.addEventListener('click',addBook);
@@ -15,7 +12,6 @@ function addBook(){
     const bookAuthor = document.getElementById('author').value;
     books.push ({"title": bookTitle, "author": bookAuthor});
     localStorage.setItem('addBook', JSON.stringify(books));
-    console.log("the new books"+ books);
     updateList(books.length-1);
 }
 
@@ -30,6 +26,7 @@ function updateList(init){
         <button onclick="removeBook(${i})">Remove</button>
         <br>
         </div>
+        <hr>
         `;
     }
 }
