@@ -23,15 +23,13 @@ class BookList {
     for (let i = init; i < this.books.length; i += 1) {
       const bookDiv = document.createElement('div');
       bookDiv.innerHTML += `
-        <span>${this.books[i].title}</span>
-        <br>
-        <span>${this.books[i].author}</span>
-        <br>
+        <span>"${this.books[i].title}" by 
+        ${this.books[i].author}</span>
         <button onclick="myBooks.removeBook(${i})">Remove</button>
-        <br>
         `;
       const hr = document.createElement('hr');
       bookDiv.appendChild(hr);
+      bookDiv.classList.add("collection");
       this.bookList.appendChild(bookDiv);
     }
   }
