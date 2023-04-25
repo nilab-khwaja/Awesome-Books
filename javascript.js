@@ -1,20 +1,8 @@
-
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
-
 class BookList {
   constructor() {
     this.bookList = document.getElementById('book-list');
     this.books = [];
-    if (localStorage.getItem('addBook') !== null) {
-      const json = localStorage.getItem('addBook');
-      this.books = JSON.parse(json);
-      this.updateList(0);
-    }
+
     const addBtn = document.getElementById('add-btn');
     addBtn.addEventListener('click', () => this.addBook());
   }
@@ -27,9 +15,7 @@ class BookList {
         ${this.books[i].author}</span>
         <button onclick="myBooks.removeBook(${i})">Remove</button>
         `;
-      const hr = document.createElement('hr');
-      bookDiv.appendChild(hr);
-      bookDiv.classList.add("collection");
+      bookDiv.classList.add('collection');
       this.bookList.appendChild(bookDiv);
     }
   }
@@ -45,7 +31,10 @@ class BookList {
   addBook() {
     const bookTitle = document.getElementById('title').value;
     const bookAuthor = document.getElementById('author').value;
-    const newBook = new Book(bookTitle, bookAuthor);
+    if (bookTitle === '' || bookAuthor === '') {
+      return;
+    }
+    const newBook = { title: bookTitle, author: bookAuthor };
     this.books.push(newBook);
     localStorage.setItem('addBook', JSON.stringify(this.books));
     this.updateList(this.books.length - 1);
@@ -53,3 +42,9 @@ class BookList {
 }
 
 const myBooks = new BookList();
+
+if (localStorage.getItem('addBook') !== null) {
+  const json = localStorage.getItem('addBook');
+  myBooks.books = JSON.parse(json);
+  myBooks.updateList(0);
+}

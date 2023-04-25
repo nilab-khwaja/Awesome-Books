@@ -2,33 +2,40 @@
   box-sizing: border-box;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
-  border: solid 3px black;
   width: 100%;
-  gap:4px;
+  gap: 4px;
 }
 
-.collection{
+.collection {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
-  gap:20px;
-  border: 2px solid red;
-  width: 100%;
+  align-items: center;
+  padding: 4px;
 }
 
-
-/* .add-book{
+#book-list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 10px;
-  gap:1px;
-  border: 2px solid red;
-  width: 100%;
-} */
+  width: 50%;
+  border: solid 3px black;
+}
+
+.collection:nth-child(odd) {
+  background-color: gray;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-book button {
+  align-self: flex-end;
+}
