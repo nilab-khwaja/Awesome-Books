@@ -50,28 +50,28 @@ if (localStorage.getItem('addBook') !== null) {
 }
 
 const list = document.getElementById('list');
-const add_new = document.getElementById('add-new');
+const addNew = document.getElementById('add-new');
 const contact = document.getElementById('contact');
-const list_section = document.getElementById('list-section');
-const add_section = document.getElementById('add-section');
-const contact_section = document.getElementById('contact-section');
+const listSection = document.getElementById('list-section');
+const addSection = document.getElementById('add-section');
+const contactSection = document.getElementById('contact-section');
 
-//add event listner
+// add event listner
 
-list.addEventListener('click',()=>{
-  list_section.style.display = 'flex';
-  add_section.style.display ='none';
-  contact_section.style.display='none';
+list.addEventListener('click', () => {
+  listSection.style.display = 'flex';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'none';
 });
 
-add_new.addEventListener('click',()=>{
-  list_section.style.display = 'none';
-  add_section.style.display ='flex';
-  contact_section.style.display='none';
+addNew.addEventListener('click', () => {
+  listSection.style.display = 'none';
+  addSection.style.display = 'flex';
+  contactSection.style.display = 'none';
 });
 
-contact.addEventListener('click',()=>{
-  list_section.style.display = 'none';
-  add_section.style.display ='none';
-  contact_section.style.display='flex';
+contact.addEventListener('click', () => {
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'flex';
 });
