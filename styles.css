@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,28 @@
   align-items: center;
   width: 100%;
   gap: 4px;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 1rem;
+  border: solid 3px black;
+  padding: 0.5rem;
+}
+
+nav * {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+}
+
+h1 {
+  flex-grow: 1;
 }
 
 .collection {
@@ -18,10 +41,17 @@
   padding: 4px;
 }
 
+#list-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
 #book-list {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   border: solid 3px black;
 }
 
@@ -38,4 +68,19 @@
 
 .add-book button {
   align-self: flex-end;
+}
+
+#add-section{
+  display: none;
+
+}
+
+#contact-section{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer{
+  padding: 2rem;
 }
