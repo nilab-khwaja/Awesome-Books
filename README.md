@@ -141,7 +141,8 @@ npx eslint .
 
 - Project from [Microverse](https://bit.ly/MicroverseTN) html & css module
 
-#![Alt![Alt text](https://user-images.githubusercontent.com/58553711/227087288-e5ba260b-bd6e-4b6f-a1d7-27690aa8fae8.png) text![Alt text](https://user-images.githubusercontent.com/58553711/227087288-e5ba260b-bd6e-4b6f-a1d7-27690aa8fae8.png)](https://user-images.githubusercontent.com/58553711/227087288-e5ba260b-bd6e-4b6f-a1d7-27690aa8fae8.png)# Contributing
+
+# Contributing
 
 Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/nilab-khwaja/Awesome-Books/issues).
