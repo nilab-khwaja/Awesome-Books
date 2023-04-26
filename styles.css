@@ -1,7 +1,13 @@
 * {
   box-sizing: border-box;
 }
-
+body{
+  padding: 10px; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
 
 .container {
   display: flex;
@@ -10,7 +16,7 @@
   align-items: center;
   width: 100%;
   gap: 4px;
-  height: 100vh;
+  flex-grow: 1;
 }
 
 nav {
@@ -66,6 +72,13 @@ h1 {
   gap: 1rem;
 }
 
+.add-book input{
+  width: 600px;
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px ;
+}
+
 .add-book button {
   align-self: flex-end;
 }
@@ -80,6 +93,8 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
+
+
 
 footer{
   padding: 2rem;

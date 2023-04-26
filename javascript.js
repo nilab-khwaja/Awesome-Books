@@ -48,3 +48,30 @@ if (localStorage.getItem('addBook') !== null) {
   myBooks.books = JSON.parse(json);
   myBooks.updateList(0);
 }
+
+const list = document.getElementById('list');
+const add_new = document.getElementById('add-new');
+const contact = document.getElementById('contact');
+const list_section = document.getElementById('list-section');
+const add_section = document.getElementById('add-section');
+const contact_section = document.getElementById('contact-section');
+
+//add event listner
+
+list.addEventListener('click',()=>{
+  list_section.style.display = 'flex';
+  add_section.style.display ='none';
+  contact_section.style.display='none';
+});
+
+add_new.addEventListener('click',()=>{
+  list_section.style.display = 'none';
+  add_section.style.display ='flex';
+  contact_section.style.display='none';
+});
+
+contact.addEventListener('click',()=>{
+  list_section.style.display = 'none';
+  add_section.style.display ='none';
+  contact_section.style.display='flex';
+});
